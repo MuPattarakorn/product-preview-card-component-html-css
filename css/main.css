@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: border-box;
+    font-size: 14px;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+body {
+    background-color: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--white);
+    width: 480px;
+    height: 380px;
+    flex-direction: row;
+    border-radius: 8px;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+}
+
+#desktop {
+    width: 240px;
+    height: 380px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.card-description {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    text-align: left;
+    color: var(--dark-grayish-blue);
+    padding: 10% 10% 5% 10%;
+
+}
+
+.product-name {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    padding: 0 10% 5% 10%;
+}
+
+.desc {
+    color: var(--dark-grayish-blue);
+    padding: 0 10% 5% 10%;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.new-price {
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan);
+    font-size: 1.5rem;
+    padding-left: 10%;
+}
+
+.old-price {
+    font-family: 'Fraunces', serif;
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+    font-size: 0.75rem;
+    padding-left: 10%;
+}
+
+button {
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    padding: 5% 10% 5% 10%;
+    margin: 5% 10% 5% 10%;
+    width: 80%;  
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+button:hover {
+    background-color: hsl(159, 39%, 20%);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+footer.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+footer.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 667px) {
+    .card-container {
+        width: 375px;
+        height: auto;
+        flex-direction: column;
+        margin: 10%;
+    }
+
+    #desktop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    #mobile {
+        position: relative;
+        width: 375px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        display: inline;
+    }
+}
